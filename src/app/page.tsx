@@ -1,3 +1,4 @@
+import { DeliveryRecord } from "@/components/Delivery-Record/delivery-record";
 import { Display } from "@/components/Display/Display";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         <Display />
         <Display />
       </div>
+        <DeliveryRecord />
     </div>
   )
 }
