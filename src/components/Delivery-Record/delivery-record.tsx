@@ -8,7 +8,7 @@ export const DeliveryRecord =() => {
         <>
             <div className="h-[60vh] w-[25vw] bg-gray-300 absolute rounded-lg">
 
-                <p className="w-full flex justify-end px-2 text-xl font-semibold">X</p>
+                <div className="w-full flex justify-end p-2 text-xl font-semibold"><svg xmlns="http://www.w3.org/2000/svg" className="cursor-pointer duration-200 hover:scale-125" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-dasharray="16" stroke-dashoffset="16" stroke-linecap="round" stroke-width="2"><path d="M7 7L17 17"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="16;0"/></path><path d="M17 7L7 17"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.4s" values="16;0"/></path></g></svg></div>
                 <h1 className="w-full flex justify-center text-2xl font-semibold mb-[25%] pt-8">Registro de entrega</h1>
 
                 <div className="flex justify-center items-center h-[4vh] gap-2 mb-[3%]">
@@ -40,11 +40,15 @@ export const DeliveryRecord =() => {
                     <input type="number" className="h-full w-[60%] px-2 font-semibold rounded-r-lg outline-blue-400" placeholder="Peso" />
                 </div>
 
-                <div className="flex justify-center items-center h-[4vh] gap-2 mb-[3%]">
+                <div className="flex justify-center items-center h-[4vh] gap-2 mb-[10%]">
                     <div className="bg-white h-full w-[4vh] flex justify-center items-center rounded-s-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 32 32"><path fill="currentColor" d="M16 5a3 3 0 0 0-3 3v9.975l-.333.298a5 5 0 1 0 6.666 0L19 17.975V8a3 3 0 0 0-3-3m-5 3a5 5 0 0 1 10 0v9.101a7 7 0 1 1-10 0zm4 4a1 1 0 1 1 2 0v7.17a3.001 3.001 0 1 1-2 0z"/></svg>
                     </div>
                     <input type="number" className="h-full w-[60%] px-2 font-semibold rounded-r-lg outline-blue-400" placeholder="Temperatura na saída" />
+                </div>
+
+                <div className="flex justify-center font-semibold">
+                    <button className="bg-blue-400 w-[10vw] p-2 rounded-lg duration-200 hover:scale-105">Registrar</button>
                 </div>
 
             </div>
