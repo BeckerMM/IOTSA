@@ -1,12 +1,12 @@
 "use client"
 import {useState } from "react"
 
-export const DeliveryRecord =() => {
+export const DeliveryRecord =({registerModal}:any) => {
     const [slabol, setSlaBol] = useState(true)
 
     return (
         <>
-            <div className="h-[60vh] w-[25vw] bg-gray-300 absolute rounded-lg">
+            <div className={`h-[60vh] w-[25vw] bg-blue-200 absolute shadow-xl rounded-lg overflow-hidden duration-200 ${registerModal ? 'opacity-100 visible':'opacity-0 invisible'}`}>
 
                 <div className="w-full flex justify-end p-2 text-xl font-semibold"><svg xmlns="http://www.w3.org/2000/svg" className="cursor-pointer duration-200 hover:scale-125" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-dasharray="16" stroke-dashoffset="16" stroke-linecap="round" stroke-width="2"><path d="M7 7L17 17"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="16;0"/></path><path d="M17 7L7 17"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.4s" values="16;0"/></path></g></svg></div>
                 <h1 className="w-full flex justify-center text-2xl font-semibold mb-[25%] pt-8">Registro de entrega</h1>
