@@ -42,7 +42,7 @@ export const Display = () => {
     });
   }, []);
 
-  const calcularQuantidadeTotal = (produtos: any[]) => {
+  const calcularQuantidadeTotal = (produtos: any[]) => {    
     return produtos.reduce((total, produto) => total + produto.quantidade, 0);
   }
 
