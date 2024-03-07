@@ -1,4 +1,52 @@
+import { get } from "@/Service/http/gets";
+import { useEffect, useState } from "react";
+
+
+
 export const Display = () => {
+  const [leiteIntegral, setLeiteIntegral] = useState<any[]>([]);
+  const [leiteDesnatado, setLeiteDesnatado] = useState<any[]>([]);
+  const [queijo, setQueijo] = useState<any[]>([]);
+  const [iogurte, setIogurte] = useState<any[]>([]);
+  const [leiteSemidesnatado, setLeiteSemidesnatado] = useState<any[]>([]);
+  const [cremeDeLeite, setCremeDeLeite] = useState<any[]>([]);
+  const [leiteZeroLactose, setLeiteZeroLactose] = useState<any[]>([]);
+
+  useEffect(() => {
+    get('leiteenvasado').then((res) => {
+      res.leiteenvasadoobj.forEach((item: any) => {
+        switch (item.produto) {
+          case 'Leite Integral':
+            setLeiteIntegral((prevItems) => [...prevItems, item]);
+            break;
+          case 'Leite Desnatado':
+            setLeiteDesnatado((prevItems) => [...prevItems, item]);
+            break;
+          case 'Queijo':
+            setQueijo((prevItems) => [...prevItems, item]);
+            break;
+          case 'Iogurte':
+            setIogurte((prevItems) => [...prevItems, item]);
+            break;
+          case 'Leite Semidesnatado':
+            setLeiteSemidesnatado((prevItems) => [...prevItems, item]);
+            break;
+          case 'Creme de Leite':
+            setCremeDeLeite((prevItems) => [...prevItems, item]);
+            break;
+          case 'Leite Zero Lactose':
+            setLeiteZeroLactose((prevItems) => [...prevItems, item]);
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  }, []);
+
+  console.log(leiteDesnatado)
+  console.log(cremeDeLeite)
+  console.log(iogurte)
   return (
     <>
       <div className="h-[30%] w-[30%] flex flex-col items-center">

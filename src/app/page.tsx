@@ -1,5 +1,4 @@
 'use client'
-import { DeliveryRecord } from "@/components/Delivery-Record/delivery-record";
 import { Display } from "@/components/Display/Display";
 import { useEffect, useRef, useState } from "react";
 import {get , getmiguel} from "@/Service/http/gets"
@@ -8,13 +7,6 @@ export default function Home() {
   const [registerModal, setRegisterModal] = useState<boolean>(false)
 
   useEffect(() => {
-    console.log(ref);
-    getmiguel('becker').then((res) => { console.log(res) })
-    get('leiteenvasado').then((res) => { console.log(res) })
-    window.addEventListener("click", (e) => {
-      console.log(e.target);
-      
-    })
   }, [ref]);
 
   const mudar =() => {

@@ -1,1 +1,0 @@
-export { DeliveryList } from "./DeliveryList";
